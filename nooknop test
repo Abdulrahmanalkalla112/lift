@@ -1,0 +1,6 @@
+void testEmergencyButton() {
+  if (digitalRead(emergencyButtonPin) == LOW) {
+    Serial.println("Noodknop geactiveerd. Alle beweging gestopt!");
+    digitalWrite(enablePin, HIGH); // Motor uitschakelen
+  }
+}
